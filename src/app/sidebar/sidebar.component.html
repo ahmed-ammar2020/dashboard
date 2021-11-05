@@ -1,0 +1,53 @@
+<app-header (toggleSidebar)="toggleSidebar()"></app-header>
+<mat-drawer-container class="example-container">
+  <mat-drawer
+    #drawer
+    class="example-sidenav"
+    mode="side"
+    [opened]="sidebarOpened"
+  >
+    <mat-card class="example-card">
+      <div class="text-center">
+        <h2>Ahmed Ammar</h2>
+        <h5>ahmed.ammar0134@gmail.com</h5>
+      </div>
+      <img
+        mat-card-image
+        src="assets/imgs/ahmed.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+    </mat-card>
+    <mat-list role="list">
+      <div mat-subheader>Pages</div>
+      <button mat-button>
+        <a mat-list-item routerLink="/">Dashboard</a>
+      </button>
+      <button mat-button>
+        <a mat-list-item routerLink="/posts">Posts</a>
+      </button>
+      <button mat-button>
+        <a mat-list-item routerLink="/contact">Contact us</a>
+      </button>
+    </mat-list>
+    <mat-divider></mat-divider>
+    <mat-list role="list">
+      <div mat-subheader>Tools</div>
+      <a mat-list-item>
+        <button mat-icon-button>
+          <mat-icon>import_contacts</mat-icon>
+        </button>
+        Contacts
+      </a>
+      <mat-list-item>
+        <button mat-icon-button>
+          <mat-icon>supervised_user_circle</mat-icon>
+        </button>
+        Leads
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <div class="example-sidenav-content">
+    <!-- Changed compontents here -->
+    <ng-content></ng-content>
+  </div>
+</mat-drawer-container>

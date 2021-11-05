@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="clickMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Dashboard</span>
+  <div class="spacer"></div>
+  <button mat-icon-button>
+    <mat-icon>settings</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>help_outline</mat-icon>
+  </button>
+  <button mat-icon-button [matMenuTriggerFor]="afterMenu">
+    <mat-icon>person_outline</mat-icon>
+  </button>
+  <mat-menu #afterMenu="matMenu" xPosition="after">
+    <button mat-menu-item>Sign out</button>
+  </mat-menu>
+</mat-toolbar>
